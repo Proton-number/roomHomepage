@@ -1,16 +1,19 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import "./App.css";
-import { Typography, Box } from "@mui/material";
-import Nav from "./Components/Nav";
-import MobileNav from "./Components/MobileNav";
-import Top from "./Components/Top";
+const Nav = lazy(() => import("./Components/Nav"));
+const MobileNav = lazy(() => import("./Components/MobileNav"));
+const Top = lazy(() => import("./Components/Top"));
+const Bottom = lazy(() => import("./Components/Bottom"));
 
 function App() {
   return (
     <>
-      <Nav />
-      <MobileNav />
-      <Top />
+      <Suspense fallback={null}>
+        <Nav />
+        <MobileNav />
+        <Top />
+        <Bottom />
+      </Suspense>
     </>
   );
 }

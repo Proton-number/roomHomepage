@@ -12,8 +12,8 @@ function Arrows() {
       spacing={{ sm: 6, lg: 8 }}
       sx={{
         position: "absolute",
-        bottom: { sm: "280px", lg: "200px" },
-        right: { sm: "194px", lg: "488px" },
+        bottom: { sm: "280px", lg: "207px" },
+        right: { sm: "194px", lg: "481px" },
         alignItems: "center",
         backgroundColor: "black",
         width: "auto",
