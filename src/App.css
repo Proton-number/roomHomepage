@@ -1,0 +1,33 @@
+
+
+#desktopNav{
+  display: none;
+}
+
+
+#mobileNav{
+  display: block;
+  }
+
+  #desktop-logo{
+    display: none;
+    }
+  
+@media screen and (min-width:900px) {
+
+  
+#desktopNav{
+  display: block;
+}
+
+  #mobileNav{
+  display: none;
+  }
+
+  #desktop-logo{
+    display: block;
+    }
+  
+ 
+}
+ 
