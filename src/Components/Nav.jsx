@@ -7,7 +7,7 @@ function Nav() {
   return (
     <>
       <Stack id="desktopNav">
-        <Toolbar sx={{ position: "absolute" }}>
+        <Toolbar sx={{ position: "absolute", zIndex: 1 }}>
           <Box component="img" src={logo} />
           <Stack direction="row" spacing={6} sx={{ marginLeft: "80px" }}>
             <Typography

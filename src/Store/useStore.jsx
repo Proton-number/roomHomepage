@@ -8,4 +8,8 @@ export const useStore = create((set) => ({
       index: state.index > 0 ? state.index - 1 : Data.length - 1,
     })),
   next: () => set((state) => ({ index: (state.index + 1) % Data.length })),
+  isDrawerOpen: false,
+  setIsDrawerOpen: (isDrawerOpen) => set({ isDrawerOpen }),
 }));
+
+

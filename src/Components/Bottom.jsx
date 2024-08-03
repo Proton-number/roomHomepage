@@ -1,13 +1,14 @@
-import React, { lazy } from "react";
+import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import Dark from "/images/image-about-dark.jpg";
 import Light from "/images/image-about-light.jpg";
 
 function Bottom() {
   return (
-    <Stack direction="row">
+    <Stack direction={{ sm: "column", lg: "row" }}>
       <Box component="img" src={Dark} />
       <Stack
+        spacing={{ sm: 3, lg: 6 }}
         sx={{
           backgroundColor: "white",
           height: "auto",
@@ -22,7 +23,10 @@ function Bottom() {
         >
           ABOUT OUR FURNITURE
         </Typography>
-        <Typography variant="body3" sx={{ opacity: "70%" }}>
+        <Typography
+          variant="body1"
+          sx={{ opacity: "70%", textAlign: "justify" }}
+        >
           Our multifunctional collection blends design and function to suit your
           individual taste. Make each room unique, or pick a cohesive theme that
           best express your interests and what inspires you. Find the furniture

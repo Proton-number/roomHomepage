@@ -9,17 +9,15 @@ function Arrows() {
   return (
     <Stack
       direction="row"
-      spacing={{ sm: 6, lg: 8 }}
+      spacing={{ xs: 4, sm: 6, lg: 8 }}
       sx={{
         position: "absolute",
-        bottom: { sm: "280px", lg: "207px" },
-        right: { sm: "194px", lg: "481px" },
+        zIndex: 1,
+        bottom: { xs: "65%", sm: "50%", lg: "50%" },
+        right: { xs: "0px", lg: "30px" },
         alignItems: "center",
         backgroundColor: "black",
-        width: "auto",
-        alignItems: "center",
-        backgroundColor: "black",
-        padding: { sm: "25px", lg: "30px" },
+        padding: { xs: "14px", sm: "25px", lg: "30px" },
       }}
     >
       <Box

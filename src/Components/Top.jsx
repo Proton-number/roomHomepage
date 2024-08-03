@@ -10,29 +10,33 @@ function Top() {
 
   return (
     <>
-      <Stack direction={{ sm: "row" }} sx={{ width: "100%" }}>
+      <Stack
+        direction={{ xs: "column", lg: "row" }}
+        sx={{ width: "100%", position: "relative" }}
+      >
         <Box
           component="img"
           src={data.desktopImg}
-          sx={{ width: { sm: "60%", lg: "60%" }, height: "auto" }}
+          sx={{ width: { xs: "100%", lg: "60%" }, height: "auto" }}
         />
+
         <Stack
           sx={{
             backgroundColor: "white",
             color: "black",
             height: "auto",
-            width: { sm: "40%", lg: "40%" },
+            width: { xs: "100%", lg: "40%" },
             justifyContent: "center",
             alignItems: "left",
+            position: "relative", // Added to ensure positioning context for Arrows
           }}
         >
           <Stack
-            spacing={{ sm: 3, lg: 6 }}
+            spacing={{ xs: 2, sm: 3, lg: 6 }}
             sx={{
               width: { sm: "80%", lg: "70%" },
-              height: "500px", // Set a fixed height here
               margin: "auto",
-              padding: { sm: "20px", lg: 0 },
+              padding: { xs: "30px", sm: "40px", lg: 0 },
             }}
           >
             <Typography
@@ -45,13 +49,16 @@ function Top() {
               {data.text1}
             </Typography>
             <>
-              <Typography variant="body3" sx={{ opacity: "70%" }}>
+              <Typography
+                variant="body3"
+                sx={{ opacity: "70%", textAlign: "justify" }}
+              >
                 {data.text2}
               </Typography>
             </>
             <Stack
               direction="row"
-              spacing={{ sm: 2, lg: 3 }}
+              spacing={{ xs: 2, lg: 3 }}
               sx={{ alignItems: "center", cursor: "pointer" }}
             >
               <Typography
@@ -70,9 +77,9 @@ function Top() {
                 />
               </svg>
             </Stack>
-            <Arrows />
           </Stack>
         </Stack>
+            <Arrows />
       </Stack>
     </>
   );
