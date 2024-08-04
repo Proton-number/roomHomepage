@@ -11,13 +11,13 @@ function Arrows() {
       direction="row"
       spacing={{ xs: 4, sm: 6, lg: 8 }}
       sx={{
-        position: "absolute",
-        zIndex: 1,
-        bottom: { xs: "65%", sm: "50%", lg: "50%" },
-        right: { xs: "0px", lg: "30px" },
         alignItems: "center",
         backgroundColor: "black",
         padding: { xs: "14px", sm: "25px", lg: "30px" },
+        width: "auto",
+        position: "absolute",
+        bottom: { xs: 0 },
+        right: { xs: 0, lg: -150 },
       }}
     >
       <Box

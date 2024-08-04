@@ -15,7 +15,17 @@ function MobileNav() {
   const { isDrawerOpen, setIsDrawerOpen } = useStore();
   return (
     <Box id="mobileNav">
-      <Toolbar sx={{ position: "absolute", zIndex: 1 }}>
+      <Toolbar
+        sx={{
+          position: "absolute",
+          top: 0,
+          zIndex: 1,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          margin: "auto",
+        }}
+      >
         <IconButton aria-label="menu" onClick={() => setIsDrawerOpen(true)}>
           <svg width="20" height="14" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -25,7 +35,16 @@ function MobileNav() {
             />
           </svg>
         </IconButton>
-        <Box component="img" src={logo} />
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            margin: "auto",
+          }}
+        >
+          <Box component="img" src={logo} />
+        </Box>
       </Toolbar>
       <Drawer
         anchor="top"
@@ -55,6 +74,7 @@ function MobileNav() {
           </Toolbar>
           <Stack spacing={5} direction="row">
             <Typography
+              variant="subtitle2"
               component={motion.p}
               whileHover={{ y: -4 }}
               sx={{ fontWeight: "bold", cursor: "pointer" }}
@@ -62,6 +82,7 @@ function MobileNav() {
               home
             </Typography>
             <Typography
+              variant="subtitle2"
               component={motion.p}
               whileHover={{ y: -4 }}
               sx={{ fontWeight: "bold", cursor: "pointer" }}
@@ -69,6 +90,7 @@ function MobileNav() {
               shop
             </Typography>
             <Typography
+              variant="subtitle2"
               component={motion.p}
               whileHover={{ y: -4 }}
               sx={{ fontWeight: "bold", cursor: "pointer" }}
@@ -76,6 +98,7 @@ function MobileNav() {
               about
             </Typography>
             <Typography
+              variant="subtitle2"
               component={motion.p}
               whileHover={{ y: -4 }}
               sx={{ fontWeight: "bold", cursor: "pointer" }}
